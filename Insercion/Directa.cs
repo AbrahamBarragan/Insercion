@@ -8,7 +8,7 @@ namespace Insercion
 {
     public class Directa
     {
-        private int[] vector;
+        private int[] arreglo;
         public void Cargar()
         {
             Console.WriteLine("Metodo de insercion directa");
@@ -17,17 +17,39 @@ namespace Insercion
             linea = Console.ReadLine();
             int cant;
             cant = int.Parse(linea);
-            vector = new int[cant];
-            for(int i = 0; i < vector.Length; i++)
+            arreglo = new int[cant];
+            for(int i = 0; i < arreglo.Length; i++)
             {
                 Console.Write("Ingrese elemento " +(i+1)+": ");
                 linea = Console.ReadLine();
-                vector[i] = int.Parse(linea);
+                arreglo[i] = int.Parse(linea);
             }
         }
         public void InsercionDirecta()
         {
-
+            int auxili;
+            int d;
+            for (int i = 0; i < arreglo.Length; i++)
+            {
+                auxili = arreglo[i];
+                d = i - 1;
+                while(d >= 0 && arreglo[d] > auxili)
+                {
+                    arreglo[d + 1] = arreglo[d];
+                    d--;
+                }
+                arreglo[d + 1] = auxili;
+            }
         }
+        public void Imprimir()
+        {
+            Console.WriteLine("vector ordenados en forma ascendente");
+            for(int i = 0; i < arreglo.Length; i++)
+            {
+                Console.Write(arreglo[i]+"  ");
+            }
+            Console.ReadKey();
+        }
+
     }
 }
