@@ -12,7 +12,7 @@ namespace Insercion
         public void Cargar()
         {
             Console.WriteLine("Metodo de insercion directa");
-            Console.WriteLine("Longitud del verctor");
+            Console.WriteLine("Longitud del arreglo");
             string linea;
             linea = Console.ReadLine();
             int cant;
