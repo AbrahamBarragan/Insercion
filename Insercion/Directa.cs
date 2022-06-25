@@ -43,7 +43,7 @@ namespace Insercion
         }
         public void Imprimir()
         {
-            Console.WriteLine("vector ordenados en forma ascendente");
+            Console.WriteLine("Arreglos ordenados en forma ascendente");
             for(int i = 0; i < arreglo.Length; i++)
             {
                 Console.Write(arreglo[i]+"  ");
